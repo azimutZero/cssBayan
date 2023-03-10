@@ -1,0 +1,12 @@
+* {
+    position: static;
+    cursor: pointer;
+}
+html {
+    background-color: rgb(120, 120, 120);
+    position: static;
+}
+body {
+    padding: 5% 20% 5%;
+    font: bold 1.4rem sans-serif;
+}
