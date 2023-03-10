@@ -1,6 +1,5 @@
 * {
     position: static;
-    cursor: pointer;
 }
 html {
     background-color: rgb(120, 120, 120);
@@ -9,4 +8,93 @@ html {
 body {
     padding: 5% 20% 5%;
     font: bold 1.4rem sans-serif;
+}
+
+/* Mems-group */
+.mems-group *{
+    color: #000;
+    cursor: pointer;
+}
+.mems-group:hover .pointer {
+    display: block;
+}
+.mems-group:hover .pointer2 {
+    display: none;
+}
+.mems-group:hover {
+    color: #ffdb1f;
+}
+
+/* mems-group-element */
+.mems-group-element {
+    align-items: center;
+    cursor: pointer;
+}
+.mems-group-element:hover .meme-img{
+    display: block;
+    animation:fadeIn ease-in 0.5s;
+    -webkit-animation:fadeIn ease-in 0.5s;
+    -moz-animation:fadeIn ease-in 0.5s;
+}
+.mems-group-element:hover .mems-label{
+    color: black;
+}
+.mems-input:checked  ~ .mems-label>.meme-img {
+    display: block;
+}
+.mems-input:checked  ~ .mems-label {
+    color: #ffdb1f;
+}
+/* test */
+.pointer2 {
+    display: none;
+    float: right;
+    width: 2rem;
+    height: 2rem;
+}
+.mems-input:checked ~ .mems-label .pointer {
+    display: none;
+}
+.mems-input:checked ~ .mems-label .pointer2 {
+    display: block;
+}
+.mems-group-element:hover .pointer {
+    transform: rotate(-90deg);
+    transition: 1s;
+}
+.mems-group-element>input {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.mems-label {
+    display: block;
+}
+.pointer {
+    width: 2rem;
+    height: 2rem;
+    float: right;
+    display: none;
+}
+.meme-img {
+    display: none;
+    text-align: center;
+    margin-top: 1rem;
+}
+.meme-img>img {
+    width: 20rem;
+    height: 20rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
