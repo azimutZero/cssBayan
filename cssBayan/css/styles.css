@@ -1,14 +1,15 @@
 * {
     position: static;
 }
-html {
+:root {
     background-color: rgb(120, 120, 120);
     position: static;
 }
 body {
     padding: 5% 20% 5%;
-    font: bold 1.4rem sans-serif;
+    font: bold 2rem sans-serif;
 }
+
 
 /* Mems-group */
 .mems-group *{
@@ -21,7 +22,7 @@ body {
 .mems-group:hover .pointer2 {
     display: none;
 }
-.mems-group:hover {
+.mems-group:hover * {
     color: #ffdb1f;
 }
 
@@ -29,6 +30,8 @@ body {
 .mems-group-element {
     align-items: center;
     cursor: pointer;
+    border-top: solid 0.2px white;
+    padding: 1rem 0 1rem;
 }
 .mems-group-element:hover .meme-img{
     display: block;
@@ -45,13 +48,7 @@ body {
 .mems-input:checked  ~ .mems-label {
     color: #ffdb1f;
 }
-/* test */
-.pointer2 {
-    display: none;
-    float: right;
-    width: 2rem;
-    height: 2rem;
-}
+
 .mems-input:checked ~ .mems-label .pointer {
     display: none;
 }
@@ -70,9 +67,9 @@ body {
 .mems-label {
     display: block;
 }
-.pointer {
-    width: 2rem;
-    height: 2rem;
+.pointer, .pointer2{
+    width: 2.2rem;
+    height: 2.2rem;
     float: right;
     display: none;
 }
@@ -82,8 +79,8 @@ body {
     margin-top: 1rem;
 }
 .meme-img>img {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
 }
 
 @keyframes fadeIn {
@@ -97,4 +94,38 @@ body {
 @-moz-keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+
+@media screen and (max-width: 1920px) {
+    main {
+        font-size: 1.1rem;
+    }
+    body {
+        padding: 5% 15% 5%;
+    }
+    .meme-img>img {
+        width: 20rem;
+        height: 20rem;
+    }
+    .pointer, .pointer2 {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
+@media screen and (max-width: 820px) {
+    body {
+        padding: 5% 3% 5%;
+    }
+    main {
+        font-size: 0.7rem;
+    }
+    .meme-img>img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .pointer, .pointer2 {
+        width: 0.9rem;
+        height: 0.9rem;
+    }
 }
