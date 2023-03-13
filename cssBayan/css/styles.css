@@ -14,13 +14,12 @@ body {
 }
 
 .mems-group-element {
-    border-top: solid 0.2px white;
+    border-top: solid 0.01rem white;
     padding: 1rem 0 1rem;
 }
 
 /* hide radio button */
 .mems-group-element>input {
-    display: none;
     width: 0;
     height: 0;
 }
